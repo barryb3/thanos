@@ -38,8 +38,7 @@ public class Influenceroutletid {
   private String outletId;
 
   @ManyToOne
-  @JoinColumn(name = "influencer_id", referencedColumnName = "influencer_id")
-  @NotNull
+  @JoinColumn(name = "influencer_id", referencedColumnName = "influencer_id",nullable = false)
   @JsonIgnore
   private InfluencerDetail influencerId;
 }

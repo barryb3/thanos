@@ -29,15 +29,12 @@ import lombok.Setter;
 @Builder
 @Transactional
 public class InfluencerInternalID {
-  @Getter(AccessLevel.NONE)
-  @Setter(AccessLevel.NONE)
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id", nullable = false)
   private Long id;
   @ManyToOne
-  @JoinColumn(name = "influencer_id", referencedColumnName = "influencer_id")
-  @NotNull
+  @JoinColumn(name = "influencer_id", referencedColumnName = "influencer_id",nullable = false)
   @JsonIgnore
   private InfluencerDetail influencerId;
   private String internalIdType;

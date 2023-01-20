@@ -91,17 +91,17 @@ public class InfluencerDetail {
       cascade = CascadeType.ALL,orphanRemoval = true,
       targetEntity = Influenceraddress.class)
   @LazyCollection(LazyCollectionOption.FALSE)
-  private List<Influenceraddress> addresses;
+  private Set<Influenceraddress> addresses;
   @OneToMany(mappedBy = "influencerId",
       cascade = CascadeType.ALL,orphanRemoval = true,
       targetEntity = Influencerbusinesscard.class)
   @LazyCollection(LazyCollectionOption.FALSE)
-  private List<Influencerbusinesscard> businessCards;
+  private Set<Influencerbusinesscard> businessCards;
   @OneToMany(mappedBy = "influencerId",
-      cascade = CascadeType.PERSIST,
+      cascade = CascadeType.ALL,
       orphanRemoval = true,targetEntity = Influenceremail.class)
   @LazyCollection(LazyCollectionOption.FALSE)
-  private List<Influenceremail> emails;
+  private Set<Influenceremail> emails;
   @OneToMany(mappedBy = "influencerId",
       cascade = CascadeType.ALL,orphanRemoval = true,
       targetEntity = Influencerfax.class)

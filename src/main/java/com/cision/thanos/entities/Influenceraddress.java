@@ -2,6 +2,7 @@ package com.cision.thanos.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -34,9 +35,8 @@ public class Influenceraddress {
   private Long id;
 
 
-  @JoinColumn(name = "influencer_id",referencedColumnName = "influencer_id")
+  @JoinColumn(name = "influencer_id",referencedColumnName = "influencer_id",nullable = false)
   @ManyToOne(fetch = FetchType.LAZY)
-  @NotNull
   @JsonIgnore
   private InfluencerDetail influencerId;
 

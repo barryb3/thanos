@@ -35,8 +35,7 @@ public class Influencerphone {
   private Long id;
 
   @ManyToOne
-  @JoinColumn(name = "influencer_id", referencedColumnName = "influencer_id",nullable = false,insertable = true)
-  @NotNull
+  @JoinColumn(name = "influencer_id", referencedColumnName = "influencer_id",nullable = false)
   @JsonIgnore
   private InfluencerDetail influencerId;
 

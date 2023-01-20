@@ -35,7 +35,7 @@ public class InfluencerControllerImpl
     if (idDb == null){
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
-    return new ResponseEntity<>(HttpStatus.OK);
+    return ResponseEntity.ok(idDb);
   }
 
   @Override

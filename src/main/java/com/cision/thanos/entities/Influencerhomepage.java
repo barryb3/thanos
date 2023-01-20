@@ -32,11 +32,10 @@ public class Influencerhomepage {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id", nullable = false)
-  @NotNull
   private Long id;
 
   @ManyToOne
-  @JoinColumn(name = "influencer_id", referencedColumnName = "influencer_id")
+  @JoinColumn(name = "influencer_id", referencedColumnName = "influencer_id",nullable = false)
   @JsonIgnore
   private InfluencerDetail influencerId;
 
